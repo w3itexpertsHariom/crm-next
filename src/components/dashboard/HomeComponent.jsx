@@ -9,7 +9,7 @@ import ActiveUserMap from './ActiveUserMap';
 import ChatElementBlog from './ChatElementBlog';
 import BestSellerTable from './BestSellerTable';
 import UpcomingBlog from './UpcomingBlog';
-// import ProjectStatusBlog from './ProjectStatusBlog';
+import ProjectStatusBlog from './ProjectStatusBlog';
 import EmployeesTableList from './EmployeesTableList';
 
 
@@ -47,7 +47,7 @@ export default function HomeComponent(){
                 <UpcomingBlog />
             </div>
             <div className="col-xl-3 col-md-6 up-shd">
-                {/* <ProjectStatusBlog  title="Projects Status"/> */}
+                <ProjectStatusBlog  title="Projects Status"/>
             </div>
             <div className="col-xl-9 bst-seller">
                 <EmployeesTableList />           

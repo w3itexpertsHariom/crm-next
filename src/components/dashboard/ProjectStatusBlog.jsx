@@ -1,6 +1,14 @@
 import React,{useState} from 'react';
-import ProjectStatusBlogDonutChart from './ProjectStatusBlogDonutChart';
 import { Dropdown } from 'react-bootstrap';
+
+import loadable from "@loadable/component";
+import pMinDelay from "p-min-delay";
+
+
+
+const ProjectStatusBlogDonutChart = loadable(() =>
+	pMinDelay(import("./ProjectStatusBlogDonutChart"), 1000)
+);
 
 const mediaBlog = [
     {title: 'Completed Projects', color: "var(--primary)"},
