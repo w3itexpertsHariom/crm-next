@@ -1,3 +1,4 @@
+import '../constant/comman.css'
 import '../assets/css/style.css'
 
 import Layout from "@/components/Layout";

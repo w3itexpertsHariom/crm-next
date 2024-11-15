@@ -91,29 +91,29 @@ const ActiveProjects = () => {
     // 		settest(i);
     // 	};
 
-    // const chackboxFun = (type) => {
-    //     setTimeout(()=>{
-    //         const chackbox = document.querySelectorAll(".sorting_1 input");
-    //         const motherChackBox = document.querySelector(".sorting_asc input");
-    //         for (let i = 0; i < chackbox.length; i++) {
-    //             const element = chackbox[i];
-    //             if (type === "all") {
-    //                 if (motherChackBox.checked) {
-    //                     element.checked = true;
-    //                 } else {
-    //                     element.checked = false;
-    //                 }
-    //             } else {
-    //                 if (!element.checked) {
-    //                     motherChackBox.checked = false;
-    //                     break;
-    //                 } else {
-    //                     motherChackBox.checked = true;
-    //                 }
-    //             }
-    //         }
-    //     },100)
-    // };
+    const chackboxFun = (type) => {
+        setTimeout(()=>{
+            const chackbox = document.querySelectorAll(".sorting_1 input");
+            const motherChackBox = document.querySelector(".sorting_asc input");
+            for (let i = 0; i < chackbox.length; i++) {
+                const element = chackbox[i];
+                if (type === "all") {
+                    if (motherChackBox.checked) {
+                        element.checked = true;
+                    } else {
+                        element.checked = false;
+                    }
+                } else {
+                    if (!element.checked) {
+                        motherChackBox.checked = false;
+                        break;
+                    } else {
+                        motherChackBox.checked = true;
+                    }
+                }
+            }
+        },100)
+    };
     return (
         <>
             <div className="card">
@@ -220,14 +220,14 @@ const ActiveProjects = () => {
                                 <tbody>
                                     {records.map((item, index) => (
                                         <tr key={index}>
-                                            {/* <td className="sorting_1">
+                                            <td className="sorting_1">
                                             <div className="form-check custom-checkbox">
                                                 <input type="checkbox" onClick={() => chackboxFun()}
                                                     className="form-check-input" id={`projectBox${index+1}`} required="" 
                                                 />
                                                 <label className="form-check-label" htmlFor={`projectBox${index+1}`}></label>
                                             </div>
-                                        </td> */}
+                                        </td>
                                             <td>{item.name}</td>
                                             <td>
                                                 <div className="d-flex align-items-center">
