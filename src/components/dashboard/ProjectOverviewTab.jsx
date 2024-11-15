@@ -1,5 +1,10 @@
 import React from 'react';
-import ProjectOverviewChart from './ProjectOverviewChart';
+import loadable from "@loadable/component";
+import pMinDelay from "p-min-delay";
+
+const ProjectOverviewChart = loadable(() =>
+	pMinDelay(import("./ProjectOverviewChart"), 1000)
+);
 
 const ProjectOverviewTab = () => {
     return (

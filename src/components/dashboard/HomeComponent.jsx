@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import CardWidget from './CardWidget';
-// import ProjectOverviewTab from './ProjectOverviewTab';
+import ProjectOverviewTab from './ProjectOverviewTab';
 import ToDoList from './ToDoList';
 // import EarningBlog from './EarningBlog';
 import ActiveProjects from './ActiveProjects';
@@ -21,7 +21,7 @@ export default function HomeComponent(){
                 <div className="row">
                     <CardWidget />
                     <div className="col-xl-8">
-                        {/* <ProjectOverviewTab /> */}
+                        <ProjectOverviewTab />
                     </div>
                     <div className="col-xl-4">
                         <ToDoList />
