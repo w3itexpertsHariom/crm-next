@@ -97,7 +97,7 @@ const CoreEmployeTable = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {tableData.map((item, index) => (
+                                    {records.map((item, index) => (
                                         <tr key={index}>
                                             <td><span>{item.emplid}</span></td>
                                             <td>
