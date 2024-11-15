@@ -61,35 +61,7 @@ const ActiveProjects = () => {
             setCurrentPage(currentPage + 1)
         }
     }
-    //     const [data, setData] = useState(
-    //         document.querySelectorAll("#projects-tbl_wrapper tbody tr")        
-    // 	);
-    // 	const sort = 5;
-    // 	const activePag = useRef(0);
-    // 	const [test, settest] = useState(0);
-    // 	const chageData = (frist, sec) => {
-    // 		for (var i = 0; i < data.length; ++i) {
-    // 			if (i >= frist && i < sec) {
-    // 				data[i].classList.remove("d-none");
-    // 			} else {
-    // 				data[i].classList.add("d-none");
-    // 			}
-    // 		}
-    // 	};
-
-    //    useEffect(() => {
-    //       setData(document.querySelectorAll("#projects-tbl_wrapper tbody tr"));
-    // 	}, [test]);
-
-    //    activePag.current === 0 && chageData(0, sort);
-    //    let paggination = Array(Math.ceil(data.length / sort))
-    //       .fill()
-    //       .map((_, i) => i + 1);
-    // 	const onClick = (i) => {
-    // 		activePag.current = i;
-    // 		chageData(activePag.current * sort, (activePag.current + 1) * sort);
-    // 		settest(i);
-    // 	};
+    
 
     const chackboxFun = (type) => {
         setTimeout(()=>{
@@ -146,77 +118,7 @@ const ActiveProjects = () => {
                                         <th>Due Date</th>
                                     </tr>
                                 </thead>
-                                {/* <tbody>
-                                {tableData.map((item, index)=>(
-                                    <tr key={index}>
-                                        <td className="sorting_1">
-                                            <div className="form-check custom-checkbox">
-                                                <input type="checkbox" onClick={() => chackboxFun()}
-                                                    className="form-check-input" id={`projectBox${index+1}`} required="" 
-                                                />
-                                                <label className="form-check-label" htmlFor={`projectBox${index+1}`}></label>
-                                            </div>
-                                        </td>
-                                        <td>{item.name}</td>
-                                        <td>
-                                            <div className="d-flex align-items-center">
-                                                <Image src={item.profile} className="avatar rounded-circle" alt="" />
-                                                <p className="mb-0 ms-2">{item.name2}</p>	
-                                            </div>
-                                        </td>
-                                        <td className="pe-0">
-                                            <div className="tbl-progress-box">
-                                                <div className="progress">
-                                                    <div 
-                                                        className={`progress-bar bg-${item.progresStyle}`} 
-                                                        style={{width: item.progresValue , height:"5px", borderRadius:"4px"}} >
-                                                    </div>
-                                                </div>
-                                                <span className="text-primary">{item.progresValue}</span>
-                                            </div>
-                                        </td>
-                                        <td className="pe-0">
-                                            <div className="avatar-list avatar-list-stacked">
-                                                {
-                                                    item.assigne === '2' ?
-                                                        <>
-                                                            <Image src={IMAGES.contact9} className="avatar rounded-circle" alt="" />
-                                                            <Image src={IMAGES.contact2} className="avatar rounded-circle" alt="" />                                                        
-                                                        </>
-                                                    
-                                                    :
-
-                                                    item.assigne === '3' ?
-                                                        <>
-                                                            <Image src={IMAGES.contact5} className="avatar rounded-circle" alt="" />
-                                                            <Image src={IMAGES.contact6} className="avatar rounded-circle" alt="" />
-                                                            <Image src={IMAGES.contact7} className="avatar rounded-circle" alt="" />
-                                                        </>
-                                                    
-                                                    :
-                                                    item.assigne === '4' ?
-                                                        <>
-                                                            <Image src={IMAGES.contact9}className="avatar rounded-circle" alt="" />
-                                                            <Image src={IMAGES.contact8} className="avatar rounded-circle" alt="" />
-                                                            <Image src={IMAGES.contact7} className="avatar rounded-circle" alt="" />
-                                                            <Image src={IMAGES.contact6} className="avatar rounded-circle" alt="" />
-                                                        </>
-                                                    :
-
-                                                    <Image src={IMAGES.contact1} className="avatar rounded-circle" alt="" />
-                                                    
-                                                }
-                                            </div>
-                                        </td>
-                                        <td className="pe-0">
-                                            <span className={`badge light border-0 badge-${item.progresStyle}`}>{item.status}</span>
-                                        </td>
-                                        <td>
-                                            <span>{item.duedate}</span>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody> */}
+                               
                                 <tbody>
                                     {records.map((item, index) => (
                                         <tr key={index}>
@@ -288,55 +190,7 @@ const ActiveProjects = () => {
                                         </tr>
                                     ))}
                                 </tbody>
-                            </table>
-                            {/* <div className="d-sm-flex text-center justify-content-between align-items-center">
-                            <div className="dataTables_info">
-                                Showing {activePag.current * sort + 1} to{" "}
-                                {data.length > (activePag.current + 1) * sort
-                                    ? (activePag.current + 1) * sort
-                                    : data.length}{" "}
-                                of {data.length} entries
-                            </div>
-                            <div
-                                className="dataTables_paginate paging_simple_numbers"
-                                id="example2_paginate"
-                            >
-                                <Link
-                                    className="paginate_button previous disabled"
-                                    href="#" scroll={false}
-                                    onClick={() =>
-                                        activePag.current > 0 &&
-                                        onClick(activePag.current - 1)
-                                    }
-                                >
-                                    <i className="fa-solid fa-angle-left" />
-                                </Link>
-                                <span>
-                                    {paggination.map((number, i) => (
-                                    <Link
-                                        key={i}
-                                        href="#" scroll={false}
-                                        className={`paginate_button  ${
-                                            activePag.current === i ? "current" : ""
-                                        } `}
-                                        onClick={() => onClick(i)}
-                                    >
-                                        {number}
-                                    </Link>
-                                    ))}
-                                </span>
-                                <Link
-                                    className="paginate_button next"
-                                    href="#" scroll={false}
-                                    onClick={() =>
-                                        activePag.current + 1 < paggination.length &&
-                                        onClick(activePag.current + 1)
-                                    }
-                                >
-                                    <i className="fa-solid fa-angle-right" />
-                                </Link>
-                            </div>
-                        </div>  */}
+                            </table>                           
                             <div className="d-sm-flex text-center justify-content-between align-items-center">
                                 <div className='dataTables_info'>
                                     Showing {lastIndex - recordsPage + 1} to{" "}

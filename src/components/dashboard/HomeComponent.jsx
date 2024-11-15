@@ -7,7 +7,7 @@ import ToDoList from './ToDoList';
 import ActiveProjects from './ActiveProjects';
 // import ActiveUserMap from './ActiveUserMap';
 import ChatElementBlog from './ChatElementBlog';
-// import BestSellerTable from './BestSellerTable';
+import BestSellerTable from './BestSellerTable';
 import UpcomingBlog from './UpcomingBlog';
 // import ProjectStatusBlog from './ProjectStatusBlog';
 // import EmployeesTableList from './EmployeesTableList';
@@ -41,7 +41,7 @@ export default function HomeComponent(){
                 <ChatElementBlog />
             </div>
             <div className="col-xl-5 bst-seller">
-                {/* <BestSellerTable /> */}
+                <BestSellerTable />
             </div>
             <div className="col-xl-3 col-md-6 up-shd">
                 <UpcomingBlog />
