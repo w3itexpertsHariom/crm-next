@@ -1,9 +1,8 @@
 "use client"
-import { useState } from 'react';
 import CardWidget from './CardWidget';
 import ProjectOverviewTab from './ProjectOverviewTab';
 import ToDoList from './ToDoList';
-// import EarningBlog from './EarningBlog';
+import EarningBlog from './EarningBlog';
 import ActiveProjects from './ActiveProjects';
 import ActiveUserMap from './ActiveUserMap';
 import ChatElementBlog from './ChatElementBlog';
@@ -13,8 +12,7 @@ import ProjectStatusBlog from './ProjectStatusBlog';
 import EmployeesTableList from './EmployeesTableList';
 
 
-export default function HomeComponent(){
-    const [cardChart, setCardChart]  = useState();
+export default function HomeComponent(){    
     return(
         <div className="row">
             <div className="col-xl-9 wid-100">
@@ -29,7 +27,7 @@ export default function HomeComponent(){
                 </div>
             </div>
             <div className="col-xl-3 t-earn">
-                {/* <EarningBlog /> */}
+                <EarningBlog />
             </div>
             <div className="col-xl-6 active-p">
                 <ActiveProjects />

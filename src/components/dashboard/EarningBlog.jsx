@@ -1,5 +1,10 @@
 import React from 'react';
-import EarningChart from './EarningChart';
+import loadable from "@loadable/component";
+import pMinDelay from "p-min-delay";
+
+const EarningChart = loadable(() =>
+	pMinDelay(import("./EarningChart"), 1000)
+);
 
 const EarningBlog = () => {
     return (
