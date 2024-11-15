@@ -1,7 +1,6 @@
 "use client"
-
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CSVLink } from 'react-csv';
 import { IMAGES } from '@/constant/theme';
@@ -61,7 +60,11 @@ const ActiveProjects = () => {
             setCurrentPage(currentPage + 1)
         }
     }
-    
+
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+      }, []);
 
     const chackboxFun = (type) => {
         setTimeout(()=>{
@@ -95,7 +98,9 @@ const ActiveProjects = () => {
                         <div className="tbl-caption d-flex justify-content-between flex-wrap align-items-center">
                             <h4 className="heading mb-0">Active Projects</h4>
                             <div>
-                                <CSVLink {...csvlink} className="btn btn-primary light btn-sm "><i className="fa-solid fa-file-excel" /> Export Report </CSVLink>
+                                {isClient && (
+                                 <CSVLink {...csvlink} className="btn btn-primary light btn-sm "><i className="fa-solid fa-file-excel" /> Export Report </CSVLink>
+                                )}
                             </div>
                         </div>
                         <div id="projects-tbl_wrapper" className="dataTables_wrapper no-footer">

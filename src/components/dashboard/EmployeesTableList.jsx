@@ -1,10 +1,11 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import Link from 'next/link';
 import { CSVLink } from 'react-csv';
 import { IMAGES } from '@/constant/theme';
 import InviteCustomer from '@/constant/ModalList';
 import EmployeeOffcanvas from '@/constant/EmployeeOffcanvas';
 import Image from 'next/image';
+
 
 const tableData = [
     {emplid: '1001', image:IMAGES.contact1, contact:'+12 123 456 7890', title:'Ricky Antony', email: 'ra@gmail.com', gender:'Female', location:'India', status:'Active'},    
@@ -87,6 +88,11 @@ const EmployeesTableList = () => {
             }
         }, 100);
     };
+
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+      }, []);
     return (
         <>
             <div className="card">            
@@ -95,7 +101,9 @@ const EmployeesTableList = () => {
                         <div className="tbl-caption">
                             <h4 className="heading mb-0">Employees</h4>
                             <div>
-                                <CSVLink {...csvlink} className="btn btn-primary light btn-sm me-2"><i className="fa-solid fa-file-excel" /> Export Report</CSVLink> 
+                                {isClient && (
+                                 <CSVLink {...csvlink} className="btn btn-primary light btn-sm me-2"><i className="fa-solid fa-file-excel" /> Export Report</CSVLink> 
+                                )}
                                 <Link href="#" scroll={false} className="btn btn-primary btn-sm"
                                    onClick={()=>employe.current.showEmployeModal()}
                                 >+ Add Employee</Link> {" "}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import WorldMap from "react-svg-worldmap";
 
 import { IMAGES } from '@/constant/theme';
@@ -32,7 +32,6 @@ const data = [
 
 
 const getStyle = ({
-
     minValue,
 
 }) => ({
@@ -41,6 +40,10 @@ const getStyle = ({
     cursor: "pointer",
 });
 const ActiveUserMap = () => {
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
     return (
         <>
             <div className="card overflow-hidden">
@@ -51,11 +54,13 @@ const ActiveUserMap = () => {
                     <div className="row">
                         <div className="col-xl-8 active-map-main">
                             <div id="world-map" className="active-map text-center">
-                                <WorldMap
-                                    size="md"
-                                    data={data}
-                                    styleFunction={getStyle}
-                                />
+                                {isClient && (
+                                    <WorldMap
+                                        size="md"
+                                        data={data}
+                                        styleFunction={getStyle}
+                                    />
+                                )}
                             </div>
                         </div>
                         <div className="col-xl-4 active-country dz-scroll">
