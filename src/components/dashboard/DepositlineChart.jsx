@@ -15,12 +15,12 @@ const  DepositlineChart = ({chartcolor}) =>{
             chart: {
               height: 40,
               type: "area",
-                // toolbar: {
-                //     show: false,
-                // },
-                // zoom: {
-                //     enabled: false
-                // },
+                toolbar: {
+                    show: false,
+                },
+                zoom: {
+                    enabled: false
+                },
                 sparkline: {
                     enabled: true
                 }
@@ -35,8 +35,8 @@ const  DepositlineChart = ({chartcolor}) =>{
             },
             stroke: {
               show: true,
-            //   width: 2,
-            //   curve:'straight',
+              width: 2,
+              curve:'straight',
               colors:[chartcolor],
             },
             // grid: {
@@ -105,41 +105,41 @@ const  DepositlineChart = ({chartcolor}) =>{
             yaxis: {
                 show: false,
             },
-            // fill: {
-            //     opacity: 0.9,
-            //     colors:chartcolor,
-            //     type: 'gradient', 
-            //     gradient: {
-            //       colorStops:[                   
-            //         {
-            //             offset: 0,
-            //             color: chartcolor,
-            //             opacity: .4
-            //         },
-            //         {
-            //             offset: 0.6,
-            //             color: chartcolor,
-            //             opacity: .4
-            //         },
-            //         {
-            //             offset: 100,
-            //             color: 'white',
-            //             opacity: 0
-            //         }
-            //       ],                
-            //     }
-            // },
-            // tooltip: {
-            //     enabled:false,
-            //     style: {
-            //         fontSize: '12px',
-            //     },
-            //     y: {
-            //         formatter: function(val) {
-            //             return "$" + val + " thousands"
-            //         }
-            //     }   
-            // }
+            fill: {
+                opacity: 0.9,
+                colors:chartcolor,
+                type: 'gradient', 
+                gradient: {
+                  colorStops:[                   
+                    {
+                        offset: 0,
+                        color: chartcolor,
+                        opacity: .4
+                    },
+                    {
+                        offset: 0.6,
+                        color: chartcolor,
+                        opacity: .4
+                    },
+                    {
+                        offset: 100,
+                        color: 'white',
+                        opacity: 0
+                    }
+                  ],                
+                }
+            },
+            tooltip: {
+                enabled:false,
+                style: {
+                    fontSize: '12px',
+                },
+                y: {
+                    formatter: function(val) {
+                        return "$" + val + " thousands"
+                    }
+                }   
+            }
        }   
     });
    

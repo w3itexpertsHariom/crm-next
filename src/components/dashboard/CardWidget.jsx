@@ -1,7 +1,15 @@
 import React from 'react';
-import DepositlineChart from './DepositlineChart';
-// import AllProjectDonutChart from './AllProjectDonutChart';
+import loadable from "@loadable/component";
+import pMinDelay from "p-min-delay";
+
 import { SVGICON } from '../../constant/theme';
+
+const DepositlineChart = loadable(() =>
+	pMinDelay(import("./DepositlineChart"), 1000)
+);
+const AllProjectDonutChart = loadable(() =>
+	pMinDelay(import("./AllProjectDonutChart"), 1000)
+);
 
 const CardWidget = () => {
     return (
@@ -25,7 +33,7 @@ const CardWidget = () => {
             <div className="col-xl-3 col-sm-6">
                 <div className="card same-card">
                     <div className="card-body d-flex align-items-center  py-2">                        
-                        {/* <AllProjectDonutChart /> */}
+                        <AllProjectDonutChart />
                         <ul className="project-list ms-0">
                             <li><h6>All Projects</h6></li>
                             <li>
@@ -62,7 +70,7 @@ const CardWidget = () => {
                                 {SVGICON.DollerRed}
                             </div>
                         </div>
-                        {/* <DepositlineChart chartcolor="#FF5E5E" /> */}
+                        <DepositlineChart chartcolor="#FF5E5E" />
                     </div>
                 </div>
             </div>

@@ -4,8 +4,6 @@ import { Dropdown } from 'react-bootstrap';
 import loadable from "@loadable/component";
 import pMinDelay from "p-min-delay";
 
-
-
 const ProjectStatusBlogDonutChart = loadable(() =>
 	pMinDelay(import("./ProjectStatusBlogDonutChart"), 1000)
 );
