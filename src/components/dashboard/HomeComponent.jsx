@@ -10,7 +10,7 @@ import ChatElementBlog from './ChatElementBlog';
 import BestSellerTable from './BestSellerTable';
 import UpcomingBlog from './UpcomingBlog';
 // import ProjectStatusBlog from './ProjectStatusBlog';
-// import EmployeesTableList from './EmployeesTableList';
+import EmployeesTableList from './EmployeesTableList';
 
 
 export default function HomeComponent(){
@@ -50,7 +50,7 @@ export default function HomeComponent(){
                 {/* <ProjectStatusBlog  title="Projects Status"/> */}
             </div>
             <div className="col-xl-9 bst-seller">
-                {/* <EmployeesTableList /> */}
+                <EmployeesTableList />           
             </div>
         </div>	
     )

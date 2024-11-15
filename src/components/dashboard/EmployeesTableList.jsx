@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef} from 'react';
 import Link from 'next/link';
 import { CSVLink } from 'react-csv';
 import { IMAGES } from '@/constant/theme';
@@ -43,56 +43,49 @@ const csvlink = {
 const EmployeesTableList = () => {
     const invite = useRef();
     const employe = useRef();
-    const [data, setData] = useState(
-		document.querySelectorAll("#employee-tbl_wrapper tbody tr")
-	);
-	const sort = 5;
-	const activePag = useRef(0);
-	const [test, settest] = useState(0);
-	const chageData = (frist, sec) => {
-		for (var i = 0; i < data.length; ++i) {
-			if (i >= frist && i < sec) {
-				data[i].classList.remove("d-none");
-			} else {
-				data[i].classList.add("d-none");
-			}
-		}
-	};
+    const [currentPage, setCurrentPage] = useState(1);
+    const recordsPage = 5;
+    const lastIndex = currentPage * recordsPage;
+    const firstIndex = lastIndex - recordsPage;
+    const records = tableData.slice(firstIndex, lastIndex);
+    const npage = Math.ceil(tableData.length / recordsPage)
+    const number = [...Array(npage + 1).keys()].slice(1)
+    function prePage() {
+        if (currentPage !== 1) {
+            setCurrentPage(currentPage - 1)
+        }
+    }
+    function changeCPage(id) {
+        setCurrentPage(id);
+    }
+    function nextPage() {
+        if (currentPage !== npage) {
+            setCurrentPage(currentPage + 1)
+        }
+    }
    
-   useEffect(() => {
-      setData(document.querySelectorAll("#employee-tbl_wrapper tbody tr"));
-	}, [test]);
-
-   activePag.current === 0 && chageData(0, sort);
-   let paggination = Array(Math.ceil(data.length / sort))
-      .fill()
-      .map((_, i) => i + 1);
-	const onClick = (i) => {
-		activePag.current = i;
-		chageData(activePag.current * sort, (activePag.current + 1) * sort);
-		settest(i);
-	};
-   
-	const checkbox = document.querySelectorAll(".sorting_20 input");
-	const motherCheckBox = document.querySelector(".sorting_asc_11 input");
-        const checkboxFun = (type) => {
-        for (let i = 0; i < checkbox.length; i++) {
-            const element = checkbox[i];
-            if (type === "all") {
-                if (motherCheckBox.checked) {
-                    element.checked = true;
+    const checkboxFun = (type) => {
+        setTimeout(() => {            
+            const checkbox = document.querySelectorAll(".sorting_20 input");
+            const motherCheckBox = document.querySelector(".sorting_asc_11 input");
+            for (let i = 0; i < checkbox.length; i++) {
+                const element = checkbox[i];
+                if (type === "all") {
+                    if (motherCheckBox.checked) {
+                        element.checked = true;
+                    } else {
+                    element.checked = false;
+                    }
                 } else {
-                 element.checked = false;
-                }
-            } else {
-                if (!element.checked) {
-                motherCheckBox.checked = false;
-                break;
-                } else {
-                    motherCheckBox.checked = true;
+                    if (!element.checked) {
+                    motherCheckBox.checked = false;
+                    break;
+                    } else {
+                        motherCheckBox.checked = true;
+                    }
                 }
             }
-        }
+        }, 100);
     };
     return (
         <>
@@ -134,7 +127,7 @@ const EmployeesTableList = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {tableData.map((item, index)=>(
+                                    {records.map((item, index)=>(
                                         <tr key={index}>
                                             <td className="sorting_20">
                                                 <div className="form-check11custom-checkbox">
@@ -173,53 +166,41 @@ const EmployeesTableList = () => {
                                 </tbody>                                
                             </table>
                             <div className="d-sm-flex text-center justify-content-between align-items-center">
-                                <div className="dataTables_info">
-                                    Showing {activePag.current * sort + 1} to{" "}
-                                    {data.length > (activePag.current + 1) * sort
-                                        ? (activePag.current + 1) * sort
-                                        : data.length}{" "}
-                                    of {data.length} entries
+                                <div className='dataTables_info'>
+                                    Showing {lastIndex - recordsPage + 1} to{" "}
+                                    {lastIndex}
+                                    {" "}of {tableData.length} entries
                                 </div>
                                 <div
-                                    className="dataTables_paginate paging_simple_numbers"
+                                    className="dataTables_paginate paging_simple_numbers justify-content-center"
                                     id="example2_paginate"
                                 >
                                     <Link
                                         className="paginate_button previous disabled"
-                                        href="#" scroll={false} 
-                                        onClick={() =>
-                                            activePag.current > 0 &&
-                                            onClick(activePag.current - 1)
-                                        }
+                                        href="#" scroll={false}
+                                        onClick={prePage}
                                     >
                                         <i className="fa-solid fa-angle-left" />
                                     </Link>
                                     <span>
-                                        {paggination.map((number, i) => (
-                                        <Link
-                                            key={i}
-                                            href="#" scroll={false} 
-                                            className={`paginate_button  ${
-                                                activePag.current === i ? "current" : ""
-                                            } `}
-                                            onClick={() => onClick(i)}
-                                        >
-                                            {number}
-                                        </Link>
+                                        {number.map((n, i) => (
+                                            <Link href="#" scroll={false} className={`paginate_button ${currentPage === n ? 'current' : ''} `} key={i}
+                                                onClick={() => changeCPage(n)}
+                                            >
+                                                {n}
+
+                                            </Link>
                                         ))}
                                     </span>
                                     <Link
                                         className="paginate_button next"
-                                        href="#" scroll={false} 
-                                        onClick={() =>
-                                            activePag.current + 1 < paggination.length &&
-                                            onClick(activePag.current + 1)
-                                        }
+                                        href="#" scroll={false}
+                                        onClick={nextPage}
                                     >
                                         <i className="fa-solid fa-angle-right" />
                                     </Link>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>

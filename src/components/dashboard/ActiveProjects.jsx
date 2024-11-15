@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { CSVLink } from 'react-csv';
 import { IMAGES } from '@/constant/theme';
