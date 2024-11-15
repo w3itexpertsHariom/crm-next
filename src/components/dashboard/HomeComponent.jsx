@@ -4,7 +4,7 @@ import { useState } from 'react';
 // import ProjectOverviewTab from './ProjectOverviewTab';
 import ToDoList from './ToDoList';
 // import EarningBlog from './EarningBlog';
-// import ActiveProjects from './ActiveProjects';
+import ActiveProjects from './ActiveProjects';
 // import ActiveUserMap from './ActiveUserMap';
 // import ChatElementBlog from './ChatElementBlog';
 // import BestSellerTable from './BestSellerTable';
@@ -32,7 +32,7 @@ export default function HomeComponent(){
                 {/* <EarningBlog /> */}
             </div>
             <div className="col-xl-6 active-p">
-                {/* <ActiveProjects /> */}
+                <ActiveProjects />
             </div>
             <div className="col-xl-6 col-md-6 flag">
                 {/* <ActiveUserMap /> */}
