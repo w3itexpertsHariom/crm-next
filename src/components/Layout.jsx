@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     }, []);
     let layoutdata = ["/page-error-400", "/page-error-403", 
         "/page-error-404", "/page-error-500", "/page-error-503", "/login",
-        "/page-register"
+        "/page-register", "/page-lock-screen"
     ];
     let cuurentpath = usePathname();      
     return (
