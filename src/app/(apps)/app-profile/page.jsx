@@ -177,7 +177,7 @@ const AppProfile = () => {
 												elementClassNames="row sp4"
 											>											
 												{galleryBlog.map((item,index)=>(
-													<div data-src={item.image} className="col-lg-4 col-xl-4 col-sm-4 col-6 int-col mb-1" key={index}>
+													<div data-src={item.image.src} className="col-lg-4 col-xl-4 col-sm-4 col-6 int-col mb-1" key={index}>
 														<Image className="px-1 py-1 img-fluid rounded" src={item.image} style={{width:"100%"}} alt="gallery"/>
 													</div>
 												))}

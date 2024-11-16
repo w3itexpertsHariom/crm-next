@@ -1,3 +1,10 @@
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-autoplay.css";
+import "lightgallery/css/lg-fullscreen.css";
+import "lightgallery/css/lg-share.css";
+import "lightgallery/css/lg-zoom.css";
 import '../constant/comman.css'
 import '../assets/css/style.css'
 
