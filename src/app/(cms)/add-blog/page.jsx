@@ -4,7 +4,7 @@ import Link from  'next/link';
 import Select from 'react-select';
 import { Collapse } from 'react-bootstrap';
 
-import CkEditorBlog from '@/components/form/ckeditor/CkEditorBlog';
+// import CkEditorBlog from '@/components/form/ckeditor/CkEditorBlog';
 import NoImage from '@/assets/images/no-image.jpg';
 import PageTitle from '@/layouts/PageTitle';
 
@@ -156,7 +156,7 @@ const AddBlog = () => {
                                 <div className='card h-auto'>
                                     <div className='card-body p-2'>
                                         <div className="custom-ekeditor cms-radius add-content-ckeditor mb-3">
-                                            <CkEditorBlog />
+                                            {/* <CkEditorBlog /> */}
                                         </div>
                                     </div>
                                 </div>
