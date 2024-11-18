@@ -10,8 +10,8 @@ const data = {
       data: [25, 20, 60, 41, 66, 45, 80],
       borderColor: 'rgba(0, 0, 1128, .3)',
       borderWidth: "1",
-      backgroundColor: 'rgba(44, 44, 44,1)', 
-      pointBackgroundColor: 'rgba(0, 0, 1128, .3)',
+      backgroundColor: 'rgba(13, 153, 255,1)', 
+      pointBackgroundColor: 'rgba(13, 153, 255, .3)',
 		  tension:0.4,
 		  fill:true
 		  

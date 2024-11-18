@@ -30,9 +30,9 @@ class BarChart1 extends Component {
         {
           label: "My First dataset",
           data: [65, 59, 80, 81, 56, 55, 40],
-          borderColor: "rgba(44, 44, 44, 1)",
+          borderColor: "rgba(13, 153, 255, 1)",
           borderWidth: "0",
-          backgroundColor: "rgba(44, 44, 44, 1)",
+          backgroundColor: "rgba(13, 153, 255, 1)",
 		      barThickness: 40
 		   
         },
