@@ -1,5 +1,5 @@
 "use client"
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link';
 import Select from 'react-select';
 import Collapse from 'react-bootstrap/Collapse';
@@ -145,7 +145,7 @@ const EmailTemplate = () =>{
                                                                         <i className="fa fa-edit"></i>
                                                                     </Link>
                                                                     <Link href={"#"} scroll={false} className="btn btn-danger btn-sm content-icon ms-1"
-                                                                        onClick={()=>handleDelete(ind)}
+                                                                        // onClick={()=>handleDelete(ind)}
                                                                     >
                                                                         <i className="fa-solid fa-trash"></i>
                                                                     </Link>
