@@ -32,6 +32,7 @@
     "react-highlight": "^0.15.0",
     "react-linear-gradient-picker": "^3.0.1",
     "react-multiselect-dropdown-bootstrap": "^1.1.0",
+    "react-nestable": "^3.0.2",
     "react-range-slider-input": "^3.0.7",
     "react-scroll": "^1.9.0",
     "react-select": "^5.8.3",
