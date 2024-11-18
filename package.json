@@ -32,6 +32,7 @@
     "react-highlight": "^0.15.0",
     "react-linear-gradient-picker": "^3.0.1",
     "react-multiselect-dropdown-bootstrap": "^1.1.0",
+    "react-range-slider-input": "^3.0.7",
     "react-scroll": "^1.9.0",
     "react-select": "^5.8.3",
     "react-sparklines": "^1.7.0",
@@ -39,6 +40,7 @@
     "react-table": "^7.8.0",
     "react-time-picker": "^7.0.0",
     "recharts": "^2.13.3",
+    "rsuite": "^5.74.2",
     "yup": "^1.4.0"
   }
 }
