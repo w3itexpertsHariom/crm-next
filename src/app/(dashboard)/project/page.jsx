@@ -84,7 +84,7 @@ const Projects = () => {
                                         <Image src={IMAGES.contact2} className="avatar avatar-lg rounded-circle" alt="round" />
                                         <div>
                                             <h6>Cedric Kelly</h6>
-                                            <span>06 May 2023</span>	
+                                            <span>06 Nov 2024</span>	
                                         </div>	
                                     </div>
                                     <p className="my-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
@@ -104,7 +104,7 @@ const Projects = () => {
                                 </div>
                                 <div className="card-footer d-flex justify-content-between flex-wrap">
                                     <div className="due-progress">
-                                        <p className="mb-0 text-secondary">Due <span className={`text-${item.theme}`}>: 2023-09-02</span></p>
+                                        <p className="mb-0 text-secondary">Due <span className={`text-${item.theme}`}>: 2024-12-02</span></p>
                                     </div>                                   
                                     <Dropdown className="task-dropdown-2">
                                         <Dropdown.Toggle as="div" className={item.status}>{item.status}</Dropdown.Toggle>
