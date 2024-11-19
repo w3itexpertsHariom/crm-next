@@ -47,7 +47,7 @@ const FineTuneJob = () => {
                     onChange={handleChange}
                     getOptionLabel={e => (
                         <div style={{ display: 'flex', alignItems: 'center' }}>                           
-                            <Image src={e.icon} alt="" style={{ width: 20, marginRight: 5 }} />
+                            <Image src={e.icon} alt="" style={{ width: 20, height: 20,marginRight: 5 }} />
                             <span style={{ marginLeft: 5 }}>{e.label}</span>
                         </div>
                     )}
