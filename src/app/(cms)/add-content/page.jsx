@@ -4,10 +4,14 @@ import React, { useReducer} from 'react';
 import Link from 'next/link';
 import Select from 'react-select';
 import { Collapse } from 'react-bootstrap';
+import loadable from "@loadable/component";
+import pMinDelay from "p-min-delay";
 
 import NoImage from '@/assets/images/no-image.jpg';
-// import CkEditorBlog from '@/components/form/ckeditor/CkEditorBlog';
 import PageTitle from '@/layouts/PageTitle';
+const CkEditorBlog = loadable(() =>
+	pMinDelay(import("@/components/form/ckeditor/CkEditorBlog"), 1000)
+);
 
 const options = [    
     { value: '2', label: 'admin@gmail.com' },
@@ -150,7 +154,7 @@ const ContentAdd = () => {
                                 <div className='card h-auto'>
                                     <div className='card-body p-2'>
                                         <div className="custom-ekeditor cms-radius add-content-ckeditor mb-3">
-                                            {/* <CkEditorBlog /> */}
+                                            <CkEditorBlog />
                                         </div>  
                                     </div>
                                 </div>   

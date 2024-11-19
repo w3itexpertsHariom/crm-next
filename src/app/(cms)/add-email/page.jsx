@@ -7,8 +7,6 @@ import pMinDelay from "p-min-delay";
 
 import PageTitle from '@/layouts/PageTitle';
 
-// import CkEditorBlog from '@/components/form/ckeditor/CkEditorBlog';
-
 const CkEditorBlog = loadable(() =>
 	pMinDelay(import("@/components/form/ckeditor/CkEditorBlog"), 1000)
 );

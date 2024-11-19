@@ -1,3 +1,4 @@
+"use client"
 import React, { Fragment, useEffect, useState } from 'react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
