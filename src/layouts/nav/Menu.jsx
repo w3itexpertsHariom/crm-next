@@ -433,10 +433,7 @@ export const MenuList = [
                 title:'Toastr',
                 to: 'uc-toastr',
             },
-            {
-                title:'Jqv Map',
-                to: 'map-jqvmap',
-            },
+            
             {
                 title:'Light Gallery',
                 to: 'uc-lightgallery',
