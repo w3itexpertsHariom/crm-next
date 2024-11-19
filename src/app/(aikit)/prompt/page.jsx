@@ -78,11 +78,11 @@ const AIMenu = () => {
                             {data.map((item, index)=>(                            
                                 <Accordion.Item className=" border-0" eventKey={`${index}`} key={index}>
                                     <Accordion.Header className="accordion-header rounded-lg" > 
-                                        <span className="me-1">
+                                        <span className="me-1 lh-1">
                                            {item.icon}
                                         </span>
-                                        <span className="accordion-header-text p-0">{item.title}</span>
-										<span className="remove-prompt ms-auto">
+                                        <span className="accordion-header-text p-0 lh-1">{item.title}</span>
+										<span className="remove-prompt ms-auto lh-1">
 											{SVGICON.RedCross}
 										</span>
                                     </Accordion.Header>                                   
@@ -121,11 +121,10 @@ const AIMenu = () => {
                                                                             <form className="form-check-label">
                                                                                 <h6 className="ps-4"> Fixed number of words</h6>
                                                                                     <div className="mb-3">
-                                                                                    <label htmlFor="exampleFormControlInput2" className="form-label">Number of words</label>
-                                                                                    <input type="number" className="form-control w-50" id="exampleFormControlInput2" placeholder="" />
-                                                                                    <div id="emailHelp1" className="form-text fs-12">Choose this option if you want to generate a fixed number of words, regardless of how long the selected text is. This is helpful for certain types of prompts, like generating a paragraph on a certain topic for example.</div>
+                                                                                        <label htmlFor="exampleFormControlInput2" className="form-label">Number of words</label>
+                                                                                        <input type="number" className="form-control w-50" id="exampleFormControlInput2" placeholder="" />
+                                                                                        <div id="emailHelp1" className="form-text fs-12">Choose this option if you want to generate a fixed number of words, regardless of how long the selected text is. This is helpful for certain types of prompts, like generating a paragraph on a certain topic for example.</div>
                                                                                     </div>
-                                                                                    
                                                                             </form>
                                                                         </div>	
                                                                     </div>
