@@ -5,7 +5,7 @@ import { Accordion } from 'react-bootstrap';
 import Link from 'next/link'; 
 
 import { Slider } from 'rsuite';
-import "rsuite/dist/rsuite.min.css"
+
 
 //import 
 import TopMenus from '@/components/aikit/TopMenus';
@@ -78,11 +78,11 @@ const AIMenu = () => {
                             {data.map((item, index)=>(                            
                                 <Accordion.Item className=" border-0" eventKey={`${index}`} key={index}>
                                     <Accordion.Header className="accordion-header rounded-lg" > 
-                                        <span className="me-1 lh-1">
+                                        <span className="me-1">
                                            {item.icon}
                                         </span>
-                                        <span className="accordion-header-text p-0 lh-1">{item.title}</span>
-										<span className="remove-prompt ms-auto lh-1">
+                                        <span className="accordion-header-text p-0">{item.title}</span>
+										<span className="remove-prompt ms-auto">
 											{SVGICON.RedCross}
 										</span>
                                     </Accordion.Header>                                   

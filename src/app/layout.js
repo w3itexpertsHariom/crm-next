@@ -5,6 +5,8 @@ import "lightgallery/css/lg-autoplay.css";
 import "lightgallery/css/lg-fullscreen.css";
 import "lightgallery/css/lg-share.css";
 import "lightgallery/css/lg-zoom.css";
+import "rsuite/dist/rsuite.min.css"
+import "nouislider/distribute/nouislider.css";
 import '../constant/comman.css'
 import '../assets/css/style.css'
 
