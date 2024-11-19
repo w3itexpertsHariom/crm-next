@@ -25,35 +25,7 @@ const tableData = [
 
 const ActiveProjects = () => {
     const [globalSelect, setGlobalSelect] = useState('Today');
-//     const [data, setData] = useState(
-// 		document.querySelectorAll("#selling-tbl_wrapper tbody tr")
-// 	);
-// 	const sort = 7;
-// 	const activePag = useRef(0);
-// 	const [test, settest] = useState(0);
-// 	const chageData = (frist, sec) => {
-// 		for (var i = 0; i < data.length; ++i) {
-// 			if (i >= frist && i < sec) {
-// 				data[i].classList.remove("d-none");
-// 			} else {
-// 				data[i].classList.add("d-none");
-// 			}
-// 		}
-// 	};
-   
-//    useEffect(() => {
-//       setData(document.querySelectorAll("#selling-tbl_wrapper tbody tr"));
-// 	}, [test]);
 
-//    activePag.current === 0 && chageData(0, sort);
-//    let paggination = Array(Math.ceil(data.length / sort))
-//       .fill()
-//       .map((_, i) => i + 1);
-// 	const onClick = (i) => {
-// 		activePag.current = i;
-// 		chageData(activePag.current * sort, (activePag.current + 1) * sort);
-// 		settest(i);
-// 	};
     const [currentPage, setCurrentPage] = useState(1);
     const recordsPage = 7;
     const lastIndex = currentPage * recordsPage;

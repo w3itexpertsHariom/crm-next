@@ -2,9 +2,16 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {Collapse} from 'react-bootstrap';
+import loadable from "@loadable/component";
+import pMinDelay from "p-min-delay";
 
-import CkEditorBlog from '@/components/form/ckeditor/CkEditorBlog';
 import PageTitle from '@/layouts/PageTitle';
+
+// import CkEditorBlog from '@/components/form/ckeditor/CkEditorBlog';
+
+const CkEditorBlog = loadable(() =>
+	pMinDelay(import("@/components/form/ckeditor/CkEditorBlog"), 1000)
+);
 
 const AddMail = () => {
     const [collapseBtn, setCollapseBtn] = useState(true);
