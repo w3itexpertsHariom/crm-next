@@ -60,11 +60,11 @@ const Widget = () => {
               <div className="card-header border-0 pb-0">
                 <h4 className="card-title">Timeline</h4>
               </div>
-              <div className="card-body">
+              <div className="card-body p-0">
                 <div
                   style={{ height: "370px" }}
                   id="DZ_W_TimeLine"
-                  className="widget-timeline dz-scroll height370 ps--active-y"
+                  className="widget-timeline dz-scroll height370 my-4 px-4"
                 >
                   <ul className="timeline">
                     <li>
@@ -155,11 +155,11 @@ const Widget = () => {
               <div className="card-header border-0 pb-0">
                 <h4 className="card-title">Timeline 2</h4>
               </div>
-              <div className="card-body">
+              <div className="card-body p-0">
                 <div
                   style={{ height: "370px" }}
                   id="DZ_W_TimeLine1"
-                  className="widget-timeline dz-scroll style-1 height370  ps--active-y"
+                  className="widget-timeline dz-scroll style-1 height370 my-4 px-4 "
                 >
                   <ul className="timeline">
                     <li>
@@ -246,15 +246,15 @@ const Widget = () => {
             </div>
           </div>
           <div className="col-xl-4  col-lg-6">
-            <div className="card">
+            <div className="card pb-0">
               <div className="card-header  border-0 pb-0">
                 <h4 className="card-title">Notifications</h4>
               </div>
-              <div className="card-body">
+              <div className="card-body p-0">
                 <div
                   style={{ height: "370px" }}
                   id="DZ_W_Todo1"
-                  className="widget-media dz-scroll  ps--active-y"
+                  className="widget-media dz-scroll my-4 px-4"
                 >
                   <ul className="timeline">
                     <li>
@@ -576,11 +576,11 @@ const Widget = () => {
               <div className="card-header border-0 pb-0">
                 <h4 className="card-title">Notifications 2</h4>
               </div>
-              <div className="card-body">
+              <div className="card-body p-0">
                 <div
                   style={{ height: "370px" }}
                   id="DZ_W_Todo2"
-                  className="widget-media dz-scroll height370  ps--active-y"
+                  className="widget-media dz-scroll height370 my-4 px-4 "
                 >
                   <ul className="timeline">
                     <li>
@@ -919,11 +919,11 @@ const Widget = () => {
               <div className="card-header border-0 pb-0">
                 <h4 className="card-title">Message</h4>
               </div>
-              <div className="card-body">
+              <div className="card-body p-0">
                 <div
                   style={{ height: "370px" }}
                   id="DZ_W_Todo3"
-                  className="widget-media dz-scroll height370  ps--active-y"
+                  className="widget-media dz-scroll height370 my-4 px-4 "
                 >
                   <ul className="timeline">
                     <li>
@@ -1334,11 +1334,11 @@ const Widget = () => {
               <div className="card-header border-0 pb-0">
                 <h4 className="card-title">To Do List</h4>
               </div>
-              <div className="card-body">
+              <div className="card-body p-0">
                 <div
                   style={{ height: "370px" }}
                   id="DZ_W_Todo4"
-                  className="widget-media dz-scroll height370  ps--active-y"
+                  className="widget-media dz-scroll height370 my-4 px-4 "
                 >
                   <ul className="timeline">
                     <li>
