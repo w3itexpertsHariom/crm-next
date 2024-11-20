@@ -8,6 +8,7 @@ import avatar2 from '../../assets/images/avatar/2.jpg'
 import avatar3 from '../../assets/images/avatar/3.jpg'
 import avatar4 from '../../assets/images/avatar/4.jpg'
 import avatar5 from '../../assets/images/avatar/5.jpg'
+import Image from 'next/image'
 
 const Chat = ({ toggleChatBox, toggleTab }) => {
   const [openMsg, setOpenMsg] = useState(false)
@@ -90,10 +91,10 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             >
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar1}
-                    className='rounded-circle user_img'
-                    alt=''
+                    className='rounded-circle user_img' layout="responsive"
+                    alt='hh'
                   />
                   <span className='online_icon'></span>
                 </div>
@@ -106,9 +107,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar2}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -122,9 +123,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar3}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon'></span>
@@ -138,9 +139,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar4}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -155,9 +156,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar5}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -171,9 +172,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar1}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon'></span>
@@ -187,9 +188,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar2}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -204,9 +205,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar3}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon'></span>
@@ -220,9 +221,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar4}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -237,9 +238,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar5}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -253,9 +254,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar1}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon'></span>
@@ -269,9 +270,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar2}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -285,9 +286,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar3}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon'></span>
@@ -302,9 +303,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar4}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>
@@ -318,9 +319,9 @@ const Chat = ({ toggleChatBox, toggleTab }) => {
             <li className='dlab-chat-user' onClick={() => setOpenMsg(true)}>
               <div className='d-flex bd-highlight'>
                 <div className='img_cont'>
-                  <img
+                  <Image
                     src={avatar5}
-                    className='rounded-circle user_img'
+                    className='rounded-circle user_img' layout="responsive"
                     alt=''
                   />
                   <span className='online_icon offline'></span>

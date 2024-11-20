@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Alerts = ({ toggleTab, PerfectScrollbar, toggleChatBox }) => {
+const Alerts = ({ toggleTab,  toggleChatBox }) => {
    return (
       <div
          className={`tab-pane fade  ${

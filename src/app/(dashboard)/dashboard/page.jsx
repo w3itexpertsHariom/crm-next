@@ -1,16 +1,16 @@
-import { Fragment } from "react";
+"use client"
+import React,{Fragment, useContext, useEffect} from 'react';
 import MainPagetitle from '@/layouts/MainPagetitle';
 
 //Import Components
-// import { ThemeContext } from "../../../context/ThemeContext";
+import { ThemeContext } from "../../../context/ThemeContext";
 import HomeComponent from '@/components/dashboard/HomeComponent';
 
 const Home = () => {
-	// const { changeBackground } = useContext(ThemeContext);	
-	// useEffect(() => {
-	// 	changeBackground({ value: "light", label: "Light" });
-	// }, []);
-
+	const { changeBackground } = useContext(ThemeContext);	
+	useEffect(() => {
+		changeBackground({ value: "light", label: "Light" });
+	}, []);
 		
 	return(
 		<Fragment>

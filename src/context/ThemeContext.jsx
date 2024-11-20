@@ -190,8 +190,13 @@ const {
   };
 
   const changeBackground = (name) => {
-    body.setAttribute("data-theme-version", name.value);
-    dispatch({background: name});
+    // body.setAttribute("data-theme-version", name.value);
+    // dispatch({background: name});
+    if (typeof document !== 'undefined') {
+      const body = document.body;
+      body.setAttribute('data-theme-version', name.value);
+      dispatch({ background: name });
+    }
   };
 
   const changeContainerPosition = (name) => {
