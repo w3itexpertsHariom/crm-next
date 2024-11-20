@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
+// import React, { Fragment } from "react";
 // import PageTitle from "@/layouts/PageTitle";
-import { Row, Col, Card,
- Table } from "react-bootstrap";
+// import { Row, Col, Card,
+//  Table } from "react-bootstrap";
 
  
 const UiGrid = () => {
   return (
     <Fragment>
       {/* <PageTitle activeMenu="Grid" pageContent="Grid" motherMenu="Bootstrap" /> */}
-      <div className="container-fluid">
+      {/* <div className="container-fluid">
         <Row>
           <Col lg={12}>
             <Card>
@@ -237,7 +237,7 @@ const UiGrid = () => {
             </Card>
           </Col>
         </Row>
-      </div>
+      </div> */}
     </Fragment>
   );
 };
