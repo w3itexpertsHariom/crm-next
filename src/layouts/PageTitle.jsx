@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const PageTitle = ({ motherMenu, activeMenu }) => {
-	let path = [];  	
-  	if (typeof window !== "undefined") {
-		path = window.location.pathname.split("/");
-  	}
+	const getPath = usePathname();
+  	const [path, setPath] = useState([]);
+	  useEffect(() => {
+		if (getPath) {
+		  setPath(getPath.split("/"));
+		}
+	  }, [getPath]);
 
   return (
 		<>
