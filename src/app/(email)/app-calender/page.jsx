@@ -1,6 +1,8 @@
 import React from "react";
-import EventCalendar from "@/components/Calendar/EventCalendar";
 import PageTitle from "@/layouts/PageTitle";
+import dynamic from 'next/dynamic';
+
+const EventCalendar = dynamic(() => import('@/components/Calendar/EventCalendar'), { ssr: false });
 
 const Calendar = () => {
    return (
