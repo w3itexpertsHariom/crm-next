@@ -1,5 +1,3 @@
-"use client"
-
 import React, { Fragment } from "react";
 import PageTitle from "@/layouts/PageTitle";
 import { Row, Col, Card,
