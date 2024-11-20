@@ -1,5 +1,5 @@
 import React from "react";
-// import EventCalendar from "@/components/Calendar/EventCalendar";
+import EventCalendar from "@/components/Calendar/EventCalendar";
 import PageTitle from "@/layouts/PageTitle";
 
 const Calendar = () => {
@@ -7,7 +7,7 @@ const Calendar = () => {
       <div className="h-80">
          <PageTitle activeMenu="Calerdar" motherMenu="App" />
          <div className="container-fluid">
-            {/* <EventCalendar /> */}
+            <EventCalendar />
          </div>
       </div>
    );
