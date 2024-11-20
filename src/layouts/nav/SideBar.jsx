@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import {MenuList} from './Menu';
 import {useScrollPosition} from "@n8tb1t/use-scroll-position";
-// import { ThemeContext } from "@/context/ThemeContext";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const reducer = (previousState, updatedState) => ({
   ...previousState,
@@ -20,12 +20,12 @@ const initialState = {
 }
 
 const SideBar = () => {
-	// const {
-	// 	iconHover,
-	// 	sidebarposition,
-	// 	headerposition,
-	// 	sidebarLayout,
-	// } = useContext(ThemeContext);
+	const {
+		iconHover,
+		sidebarposition,
+		headerposition,
+		sidebarLayout,
+	} = useContext(ThemeContext);
 
   const [state, setState] = useReducer(reducer, initialState);	
 	useEffect(() => {
@@ -83,16 +83,15 @@ const SideBar = () => {
 
   return (
     <div
-      // className={`deznav  border-right ${iconHover} ${
-      //   sidebarposition.value === "fixed" &&
-      //   sidebarLayout.value === "horizontal" &&
-      //   headerposition.value === "static"
-      //     ? hideOnScroll > 120
-      //       ? "fixed"
-      //       : ""
-      //     : ""
-      // }`}
-      className="deznav  border-right"
+      className={`deznav  border-right ${iconHover} ${
+        sidebarposition.value === "fixed" &&
+        sidebarLayout.value === "horizontal" &&
+        headerposition.value === "static"
+          ? hideOnScroll > 120
+            ? "fixed"
+            : ""
+          : ""
+      }`}      
     >
         <div className="deznav-scroll">         
           <ul className="metismenu" id="menu">              

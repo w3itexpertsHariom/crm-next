@@ -55,10 +55,7 @@ const {
 // const body = use(document.body)
 
 
-if(typeof document === 'undefined'){
-  return null
-}
-  const body = document.querySelector("body"); 
+  // const body = document.querySelector("body"); 
     // layout
   const layoutOption = [
     { value: "vertical", label: "Vertical" },
