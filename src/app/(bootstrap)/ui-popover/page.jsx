@@ -73,9 +73,9 @@ const UiPopOver = () => {
                               id={`popover-positioned-${placement.toLowerCase()}`}
                             >
                             <h3 className='popover-header'>{`Popover on ${placement}`}</h3> 
-                            <strong>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-                            </strong>
+                            <div className="popover-body">
+                              <p className="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            </div>
                           </Tooltip>  
                         }
                       >

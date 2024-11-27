@@ -23,3 +23,12 @@
 .react-datepicker-wrapper{
     width: 100%;
 }
+
+.dz-card .code-area{
+    background: var(--secondary);
+}
+
+.toltip-popover .tooltip-inner{
+    overflow: hidden;
+    max-width: 250px;
+}
